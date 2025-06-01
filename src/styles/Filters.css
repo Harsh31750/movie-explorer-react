@@ -1,0 +1,135 @@
+.filters-favourites-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  gap: 10px;
+}
+
+.filters-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.Genre,
+.Sort {
+  background-color: rgba(0, 255, 255, 0.15);
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  min-width: 150px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.Genre:focus,
+.Sort:focus,
+.number:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 6px rgba(33, 150, 243, 0.4);
+}
+
+.number {
+  width: 140px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+
+
+
+.favourites-button-section {
+  display: flex;
+  align-items: center;
+}
+
+.favourite-movies-btn {
+  background-color: #ff3b3f;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favourite-movies-btn:hover {
+  background-color: #cc2f33;
+}
+
+
+
+
+.favourites-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.favourites-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.back-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #007bff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .favourites-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .back-btn {
+    align-self: flex-end;
+    padding: 8px 16px;
+  }
+
+  .filters-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Genre,
+  .Sort,
+  .number {
+    width: 90%;
+    max-width: 340px;
+    min-width: unset;
+  }
+}

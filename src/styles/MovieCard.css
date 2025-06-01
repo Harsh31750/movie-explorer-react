@@ -1,0 +1,148 @@
+.movie-card {
+  background-color: #1f2b3a;
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  text-align: left;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+}
+
+.movie-card:hover,
+.movie-card:focus {
+  transform: scale(1.03);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+  border-radius: 12px 12px 0 0;
+  display: block;
+}
+
+.movie-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 6px 8px;
+}
+
+.movie-card h2 {
+  font-size: 1rem;
+  margin: 6px 0 8px 0;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #fff;
+}
+
+.movie-card p {
+  font-size: 0.75rem;
+  margin: 4px 0;
+  color: #ccc;
+}
+
+.rating {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+.type-genre {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  font-size: 0.65rem;
+  color: #888;
+}
+
+.likes i {
+  margin-right: 6px;
+  color: #aaa;
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 8px 10px;
+  flex-wrap: wrap;
+}
+
+.Fav,
+.WT {
+  padding: 6px 26px;
+  font-size: 12px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.Fav {
+  background-color: #ff4081;
+  color: white;
+}
+
+.Fav:hover {
+  background-color: #e91e63;
+}
+
+.WT {
+  background-color: #2196f3;
+  color: white;
+}
+
+.WT:hover {
+  background-color: #1976d2;
+}
+
+
+
+
+@media (max-width: 480px) {
+  .movie-card {
+    width: 100%;
+  }
+
+  .movie-card h2 {
+    font-size: 0.9rem;
+  }
+
+  .movie-card p {
+    font-size: 0.65rem;
+  }
+
+  .modal-btn {
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px 8px;
+  }
+
+  .Fav,
+  .WT {
+    width: 100%;
+    font-size: 11px;
+    padding: 8px 0;
+  }
+}
+
+.movie-year-inline {
+  font-size: 0.8rem;
+  color: #bbb;
+  font-weight: normal;
+}

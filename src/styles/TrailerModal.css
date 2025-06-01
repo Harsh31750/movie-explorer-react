@@ -1,0 +1,75 @@
+.trailer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 20px;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.trailer-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background-color: #000;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  cursor: default;
+}
+
+.trailer-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.trailer-close-btn:hover,
+.trailer-close-btn:focus {
+  color: #ff4b4b;
+  outline: none;
+}
+
+.trailer-modal-content iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .trailer-modal-content iframe {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trailer-modal-content iframe {
+    height: 240px;
+  }
+
+  .trailer-close-btn {
+    font-size: 26px;
+    top: 8px;
+    right: 12px;
+  }
+}
